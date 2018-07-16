@@ -33,7 +33,12 @@
 			<artifactId>spring-ldap-core</artifactId>
 			<version>2.0.2.RELEASE</version>
 		</dependency>
-
+    <!-- 方便对当地文件操作,如读取当地文件等 -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
 		<!-- crash -->
 		<dependency>
 			<groupId>org.crashub</groupId>
@@ -435,6 +440,14 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
 			</plugin>
-		</plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
 	</build>
 </project>
